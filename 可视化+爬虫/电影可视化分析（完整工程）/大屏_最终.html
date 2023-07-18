@@ -1,0 +1,2561 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>基于Python的电影数据分析大屏</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-wordcloud.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/jquery.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/ResizeSensor.js"></script>
+
+            <link rel="stylesheet"  href="https://assets.pyecharts.org/assets/jquery-ui.css">
+
+</head>
+<body>
+    <style>.box {  }; </style>
+        
+    <div class="box">
+                <div id="bar_cmt2" class="chart-container" style="position: absolute; width: 549.857142px; height: 349.857142px; top: 129.85714721679688px; left: 7.000000476837158px;"></div>
+    <script>
+        var chart_bar_cmt2 = echarts.init(
+            document.getElementById('bar_cmt2'), 'white', {renderer: 'canvas'});
+        var option_bar_cmt2 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "\u8bc4\u4ef7\u6570",
+            "legendHoverLink": true,
+            "data": [
+                0,
+                7,
+                18,
+                54,
+                127,
+                44
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "markPoint": {
+                "symbolSize": 35,
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u6700\u5927\u503c",
+                        "type": "max"
+                    }
+                ]
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u8bc4\u4ef7\u6570"
+            ],
+            "selected": {
+                "\u8bc4\u4ef7\u6570": true
+            },
+            "show": true,
+            "left": "right",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "name": "\u8bc4\u8bba\u6570",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "fontSize": 8
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "0-10w",
+                "10w-20w",
+                "20w-30w",
+                "30w-50w",
+                "50w-100w",
+                "100w-300w"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "name": "\u7535\u5f71\u6570\u91cf",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "rotate": 0
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": true,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u8bc4\u4ef7\u6570\u91cf\u533a\u95f4\u5206\u5e03-\u67f1\u5f62\u56fe",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "toolbox": {
+        "show": false,
+        "orient": "horizontal",
+        "itemSize": 15,
+        "itemGap": 10,
+        "left": "80%",
+        "feature": {
+            "saveAsImage": {
+                "type": "png",
+                "backgroundColor": "auto",
+                "connectedBackgroundColor": "#fff",
+                "show": true,
+                "title": "\u4fdd\u5b58\u4e3a\u56fe\u7247",
+                "pixelRatio": 1
+            },
+            "restore": {
+                "show": true,
+                "title": "\u8fd8\u539f"
+            },
+            "dataView": {
+                "show": true,
+                "title": "\u6570\u636e\u89c6\u56fe",
+                "readOnly": false,
+                "lang": [
+                    "\u6570\u636e\u89c6\u56fe",
+                    "\u5173\u95ed",
+                    "\u5237\u65b0"
+                ],
+                "backgroundColor": "#fff",
+                "textareaColor": "#fff",
+                "textareaBorderColor": "#333",
+                "textColor": "#000",
+                "buttonColor": "#c23531",
+                "buttonTextColor": "#fff"
+            },
+            "dataZoom": {
+                "show": true,
+                "title": {
+                    "zoom": "\u533a\u57df\u7f29\u653e",
+                    "back": "\u533a\u57df\u7f29\u653e\u8fd8\u539f"
+                },
+                "icon": {},
+                "xAxisIndex": false,
+                "yAxisIndex": false,
+                "filterMode": "filter"
+            },
+            "magicType": {
+                "show": true,
+                "type": [
+                    "line",
+                    "bar",
+                    "stack",
+                    "tiled"
+                ],
+                "title": {
+                    "line": "\u5207\u6362\u4e3a\u6298\u7ebf\u56fe",
+                    "bar": "\u5207\u6362\u4e3a\u67f1\u72b6\u56fe",
+                    "stack": "\u5207\u6362\u4e3a\u5806\u53e0",
+                    "tiled": "\u5207\u6362\u4e3a\u5e73\u94fa"
+                },
+                "icon": {}
+            },
+            "brush": {
+                "icon": {},
+                "title": {
+                    "rect": "\u77e9\u5f62\u9009\u62e9",
+                    "polygon": "\u5708\u9009",
+                    "lineX": "\u6a2a\u5411\u9009\u62e9",
+                    "lineY": "\u7eb5\u5411\u9009\u62e9",
+                    "keep": "\u4fdd\u6301\u9009\u62e9",
+                    "clear": "\u6e05\u9664\u9009\u62e9"
+                }
+            }
+        }
+    }
+};
+        chart_bar_cmt2.setOption(option_bar_cmt2);
+    </script>
+<br/>                <div id="pie1" class="chart-container" style="position: absolute; width: 449.857142px; height: 349.857142px; top: 130.2857208251953px; left: 562px;"></div>
+    <script>
+        var chart_pie1 = echarts.init(
+            document.getElementById('pie1'), 'white', {renderer: 'canvas'});
+        var option_pie1 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "name": "\u8bc4\u4ef7\u60c5\u611f\u5206\u5e03",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "\u79ef\u6781",
+                    "value": 198
+                },
+                {
+                    "name": "\u4e2d\u6027",
+                    "value": 42
+                },
+                {
+                    "name": "\u6d88\u6781",
+                    "value": 10
+                }
+            ],
+            "radius": [
+                "30%",
+                "55%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "radius",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {c}"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u79ef\u6781",
+                "\u4e2d\u6027",
+                "\u6d88\u6781"
+            ],
+            "selected": {},
+            "show": true,
+            "left": "right",
+            "orient": "vertical",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "\u77ed\u8bc4\u60c5\u611f\u5206\u5e03-\u997c\u56fe",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_pie1.setOption(option_pie1);
+    </script>
+<br/>                <div id="wc1" class="chart-container" style="position: absolute; width: 540.857142px; height: 349.857142px; top: 483.71429443359375px; left: 8px;"></div>
+    <script>
+        var chart_wc1 = echarts.init(
+            document.getElementById('wc1'), 'white', {renderer: 'canvas'});
+        var option_wc1 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "name": "\u5bfc\u6f14\u540d\u79f0",
+            "shape": "circle",
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 3,
+            "sizeRange": [
+                12,
+                18
+            ],
+            "data": [
+                {
+                    "name": "\u5bab\u5d0e\u9a8f Hayao Miyazaki",
+                    "value": 8,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(140,18,70)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53f2\u8482\u6587\u00b7\u65af\u76ae\u5c14\u4f2f\u683c Steven Spielberg",
+                    "value": 6,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(103,31,62)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u514b\u91cc\u65af\u6258\u5f17\u00b7\u8bfa\u5170 Christopher Nolan",
+                    "value": 6,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(39,43,16)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u674e\u5b89 Ang Lee",
+                    "value": 5,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(155,137,1)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u738b\u5bb6\u536b Kar Wai Wong",
+                    "value": 5,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(145,106,76)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5927\u536b\u00b7\u82ac\u5947 David Fincher",
+                    "value": 4,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(85,121,138)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4eca\u654f Satoshi Kon",
+                    "value": 4,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(158,97,39)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u662f\u679d\u88d5\u548c Hirokazu Koreeda",
+                    "value": 4,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(146,30,61)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8a79\u59c6\u65af\u00b7\u5361\u6885\u9686 James Cameron",
+                    "value": 3,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(48,56,69)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6731\u585e\u4f69\u00b7\u6258\u7eb3\u591a\u96f7 Giuseppe Tornatore",
+                    "value": 3,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(37,2,147)"
+                        }
+                    }
+                }
+            ],
+            "width": "500px",
+            "height": "400px",
+            "drawOutOfBound": false,
+            "textStyle": {
+                "emphasis": {}
+            },
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "\u5bfc\u6f14\u59d3\u540d\u5206\u6790-\u8bcd\u4e91\u56fe",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10,
+            "textStyle": {
+                "fontSize": 20
+            }
+        }
+    ]
+};
+        chart_wc1.setOption(option_wc1);
+    </script>
+<br/>                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="5d2f97e35a654fe2970e6d940bad2a84" class="chart-container" style="position: absolute; width: 624.857142px; height: 533.857142px; top: 839.1428833007812px; left: 8px;">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > </p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>电影名称</th>
+            <th>评分</th>
+            <th>评论数</th>
+            <th>上映年</th>
+            <th>一句话短评</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>肖申克的救赎</td>
+            <td>9.7</td>
+            <td>2820297</td>
+            <td>1994</td>
+            <td>希望让人自由。</td>
+        </tr>
+        <tr>
+            <td>霸王别姬</td>
+            <td>9.6</td>
+            <td>2086021</td>
+            <td>1993</td>
+            <td>风华绝代。</td>
+        </tr>
+        <tr>
+            <td>美丽人生</td>
+            <td>9.6</td>
+            <td>1297945</td>
+            <td>1997</td>
+            <td>最美的谎言。</td>
+        </tr>
+        <tr>
+            <td>辛德勒的名单</td>
+            <td>9.6</td>
+            <td>1081241</td>
+            <td>1993</td>
+            <td>拯救一个人，就是拯救整个世界。</td>
+        </tr>
+        <tr>
+            <td>控方证人</td>
+            <td>9.6</td>
+            <td>533439</td>
+            <td>1957</td>
+            <td>比利·怀德满分作品。</td>
+        </tr>
+        <tr>
+            <td>阿甘正传</td>
+            <td>9.5</td>
+            <td>2111822</td>
+            <td>1994</td>
+            <td>一部美国近现代史。</td>
+        </tr>
+        <tr>
+            <td>泰坦尼克号</td>
+            <td>9.5</td>
+            <td>2075877</td>
+            <td>1997</td>
+            <td>失去的才是永恒的。 </td>
+        </tr>
+        <tr>
+            <td>茶馆</td>
+            <td>9.5</td>
+            <td>134350</td>
+            <td>1982(中国大陆)</td>
+            <td>无</td>
+        </tr>
+        <tr>
+            <td>背靠背，脸对脸</td>
+            <td>9.5</td>
+            <td>125952</td>
+            <td>1994</td>
+            <td>无</td>
+        </tr>
+        <tr>
+            <td>这个杀手不太冷</td>
+            <td>9.4</td>
+            <td>2246314</td>
+            <td>1994</td>
+            <td>怪蜀黍和小萝莉不得不说的故事。</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+<br/>                <div id="bar_cmt1" class="chart-container" style="position: absolute; width: 449.857142px; height: 349.857142px; top: 483.71429443359375px; left: 561px;"></div>
+    <script>
+        var chart_bar_cmt1 = echarts.init(
+            document.getElementById('bar_cmt1'), 'white', {renderer: 'canvas'});
+        var option_bar_cmt1 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "\u8bc4\u8bba\u6570\u91cf",
+            "legendHoverLink": true,
+            "data": [
+                2820297,
+                2246314,
+                2188309,
+                2111822,
+                2086021,
+                2075877,
+                2052190,
+                2017350,
+                1879566,
+                1821219
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u8bc4\u8bba\u6570\u91cf"
+            ],
+            "selected": {
+                "\u8bc4\u8bba\u6570\u91cf": true
+            },
+            "show": true,
+            "left": "right",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "name": "\u8bc4\u8bba",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "show": true,
+                "position": "top",
+                "rotate": 0,
+                "margin": 8,
+                "fontSize": 8
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "yAxis": [
+        {
+            "name": "\u7535\u5f71",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "show": true,
+                "position": "top",
+                "rotate": 45,
+                "margin": 8,
+                "fontSize": 7
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u8096\u7533\u514b\u7684\u6551\u8d4e",
+                "\u8fd9\u4e2a\u6740\u624b\u4e0d\u592a\u51b7",
+                "\u5343\u4e0e\u5343\u5bfb",
+                "\u963f\u7518\u6b63\u4f20",
+                "\u9738\u738b\u522b\u59ec",
+                "\u6cf0\u5766\u5c3c\u514b\u53f7",
+                "\u6211\u4e0d\u662f\u836f\u795e",
+                "\u76d7\u68a6\u7a7a\u95f4",
+                "\u75af\u72c2\u52a8\u7269\u57ce",
+                "\u4e09\u50bb\u5927\u95f9\u5b9d\u83b1\u575e"
+            ]
+        }
+    ],
+    "title": [
+        {
+            "text": "\u8bc4\u8bba\u6570TOP10-\u6761\u5f62\u56fe",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "toolbox": {
+        "show": false,
+        "orient": "horizontal",
+        "itemSize": 15,
+        "itemGap": 10,
+        "left": "80%",
+        "feature": {
+            "saveAsImage": {
+                "type": "png",
+                "backgroundColor": "auto",
+                "connectedBackgroundColor": "#fff",
+                "show": true,
+                "title": "\u4fdd\u5b58\u4e3a\u56fe\u7247",
+                "pixelRatio": 1
+            },
+            "restore": {
+                "show": true,
+                "title": "\u8fd8\u539f"
+            },
+            "dataView": {
+                "show": true,
+                "title": "\u6570\u636e\u89c6\u56fe",
+                "readOnly": false,
+                "lang": [
+                    "\u6570\u636e\u89c6\u56fe",
+                    "\u5173\u95ed",
+                    "\u5237\u65b0"
+                ],
+                "backgroundColor": "#fff",
+                "textareaColor": "#fff",
+                "textareaBorderColor": "#333",
+                "textColor": "#000",
+                "buttonColor": "#c23531",
+                "buttonTextColor": "#fff"
+            },
+            "dataZoom": {
+                "show": true,
+                "title": {
+                    "zoom": "\u533a\u57df\u7f29\u653e",
+                    "back": "\u533a\u57df\u7f29\u653e\u8fd8\u539f"
+                },
+                "icon": {},
+                "xAxisIndex": false,
+                "yAxisIndex": false,
+                "filterMode": "filter"
+            },
+            "magicType": {
+                "show": true,
+                "type": [
+                    "line",
+                    "bar",
+                    "stack",
+                    "tiled"
+                ],
+                "title": {
+                    "line": "\u5207\u6362\u4e3a\u6298\u7ebf\u56fe",
+                    "bar": "\u5207\u6362\u4e3a\u67f1\u72b6\u56fe",
+                    "stack": "\u5207\u6362\u4e3a\u5806\u53e0",
+                    "tiled": "\u5207\u6362\u4e3a\u5e73\u94fa"
+                },
+                "icon": {}
+            },
+            "brush": {
+                "icon": {},
+                "title": {
+                    "rect": "\u77e9\u5f62\u9009\u62e9",
+                    "polygon": "\u5708\u9009",
+                    "lineX": "\u6a2a\u5411\u9009\u62e9",
+                    "lineY": "\u7eb5\u5411\u9009\u62e9",
+                    "keep": "\u4fdd\u6301\u9009\u62e9",
+                    "clear": "\u6e05\u9664\u9009\u62e9"
+                }
+            }
+        }
+    }
+};
+        chart_bar_cmt1.setOption(option_bar_cmt1);
+    </script>
+<br/>                <div id="scatter1" class="chart-container" style="position: absolute; width: 407.857142px; height: 349.857142px; top: 838.1428833007812px; left: 635px;"></div>
+    <script>
+        var chart_scatter1 = echarts.init(
+            document.getElementById('scatter1'), 'white', {renderer: 'canvas'});
+        var option_scatter1 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "effectScatter",
+            "name": "\u8bc4\u5206",
+            "showEffectOn": "render",
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "symbolSize": 10,
+            "data": [
+                [
+                    "1994",
+                    9.7
+                ],
+                [
+                    "1993",
+                    9.6
+                ],
+                [
+                    "1994",
+                    9.5
+                ],
+                [
+                    "1997",
+                    9.5
+                ],
+                [
+                    "1994",
+                    9.4
+                ],
+                [
+                    "1997",
+                    9.6
+                ],
+                [
+                    "2001",
+                    9.4
+                ],
+                [
+                    "1993",
+                    9.6
+                ],
+                [
+                    "2010",
+                    9.4
+                ],
+                [
+                    "2014",
+                    9.4
+                ],
+                [
+                    "1998",
+                    9.4
+                ],
+                [
+                    "2009",
+                    9.4
+                ],
+                [
+                    "1998",
+                    9.3
+                ],
+                [
+                    "2009",
+                    9.2
+                ],
+                [
+                    "2004",
+                    9.3
+                ],
+                [
+                    "2008",
+                    9.3
+                ],
+                [
+                    "2002",
+                    9.3
+                ],
+                [
+                    "2016",
+                    9.2
+                ],
+                [
+                    "1957",
+                    9.6
+                ],
+                [
+                    "1995",
+                    9.2
+                ],
+                [
+                    "2011",
+                    9.4
+                ],
+                [
+                    "1972",
+                    9.3
+                ],
+                [
+                    "2006",
+                    9.2
+                ],
+                [
+                    "2011",
+                    9.3
+                ],
+                [
+                    "2010",
+                    9.1
+                ],
+                [
+                    "1988",
+                    9.2
+                ],
+                [
+                    "1987",
+                    9.3
+                ],
+                [
+                    "2017",
+                    9.1
+                ],
+                [
+                    "1994",
+                    9.3
+                ],
+                [
+                    "2008",
+                    9.2
+                ],
+                [
+                    "2001",
+                    9.2
+                ],
+                [
+                    "2003",
+                    9.3
+                ],
+                [
+                    "1939",
+                    9.3
+                ],
+                [
+                    "2018",
+                    9.0
+                ],
+                [
+                    "2013",
+                    9.3
+                ],
+                [
+                    "2009",
+                    9.1
+                ],
+                [
+                    "1957",
+                    9.4
+                ],
+                [
+                    "2018",
+                    9.1
+                ],
+                [
+                    "2016",
+                    9.0
+                ],
+                [
+                    "2004",
+                    9.1
+                ],
+                [
+                    "2000",
+                    9.3
+                ],
+                [
+                    "2012",
+                    9.1
+                ],
+                [
+                    "2010",
+                    9.0
+                ],
+                [
+                    "2002",
+                    9.1
+                ],
+                [
+                    "2015",
+                    9.3
+                ],
+                [
+                    "2002",
+                    9.3
+                ],
+                [
+                    "1995",
+                    9.0
+                ],
+                [
+                    "1986",
+                    9.2
+                ],
+                [
+                    "2002",
+                    9.2
+                ],
+                [
+                    "1992",
+                    9.1
+                ],
+                [
+                    "1988",
+                    9.2
+                ],
+                [
+                    "1953",
+                    9.1
+                ],
+                [
+                    "2018",
+                    8.9
+                ],
+                [
+                    "1989",
+                    9.2
+                ],
+                [
+                    "1961",
+                    9.4
+                ],
+                [
+                    "2001",
+                    9.1
+                ],
+                [
+                    "1999",
+                    9.1
+                ],
+                [
+                    "1974",
+                    9.3
+                ],
+                [
+                    "1994",
+                    9.1
+                ],
+                [
+                    "2013",
+                    9.2
+                ],
+                [
+                    "1994",
+                    9.2
+                ],
+                [
+                    "1999",
+                    9.0
+                ],
+                [
+                    "2001",
+                    9.1
+                ],
+                [
+                    "2008",
+                    9.0
+                ],
+                [
+                    "2008",
+                    9.2
+                ],
+                [
+                    "2006",
+                    9.2
+                ],
+                [
+                    "1995",
+                    8.9
+                ],
+                [
+                    "1998",
+                    9.1
+                ],
+                [
+                    "2000",
+                    8.9
+                ],
+                [
+                    "1965",
+                    9.1
+                ],
+                [
+                    "2016",
+                    8.8
+                ],
+                [
+                    "2009",
+                    8.8
+                ],
+                [
+                    "1998",
+                    9.1
+                ],
+                [
+                    "1975",
+                    9.1
+                ],
+                [
+                    "1997",
+                    9.2
+                ],
+                [
+                    "2011",
+                    9.0
+                ],
+                [
+                    "1991",
+                    8.9
+                ],
+                [
+                    "2010",
+                    8.9
+                ],
+                [
+                    "2014",
+                    8.9
+                ],
+                [
+                    "2006",
+                    8.9
+                ],
+                [
+                    "2004",
+                    8.9
+                ],
+                [
+                    "2009",
+                    9.3
+                ],
+                [
+                    "2004",
+                    8.8
+                ],
+                [
+                    "1997",
+                    8.9
+                ],
+                [
+                    "1984",
+                    9.2
+                ],
+                [
+                    "1994",
+                    8.9
+                ],
+                [
+                    "2004",
+                    8.9
+                ],
+                [
+                    "1936",
+                    9.3
+                ],
+                [
+                    "1997",
+                    9.0
+                ],
+                [
+                    "2011",
+                    9.0
+                ],
+                [
+                    "1999",
+                    8.8
+                ],
+                [
+                    "2003",
+                    8.9
+                ],
+                [
+                    "1995",
+                    8.8
+                ],
+                [
+                    "2003",
+                    8.9
+                ],
+                [
+                    "2006",
+                    9.1
+                ],
+                [
+                    "2003",
+                    8.8
+                ],
+                [
+                    "2002",
+                    8.8
+                ],
+                [
+                    "2012",
+                    9.1
+                ],
+                [
+                    "2006",
+                    8.9
+                ],
+                [
+                    "2013",
+                    8.9
+                ],
+                [
+                    "2000",
+                    9.1
+                ],
+                [
+                    "1993",
+                    8.7
+                ],
+                [
+                    "2017",
+                    8.9
+                ],
+                [
+                    "2005",
+                    8.8
+                ],
+                [
+                    "1990",
+                    8.7
+                ],
+                [
+                    "1995",
+                    8.9
+                ],
+                [
+                    "2008",
+                    8.9
+                ],
+                [
+                    "1995",
+                    8.8
+                ],
+                [
+                    "1999",
+                    8.9
+                ],
+                [
+                    "1994",
+                    8.8
+                ],
+                [
+                    "2012",
+                    8.8
+                ],
+                [
+                    "1997",
+                    8.9
+                ],
+                [
+                    "2014",
+                    8.7
+                ],
+                [
+                    "1999",
+                    8.9
+                ],
+                [
+                    "2004",
+                    8.9
+                ],
+                [
+                    "2001",
+                    8.7
+                ],
+                [
+                    "1996",
+                    8.9
+                ],
+                [
+                    "1994",
+                    8.9
+                ],
+                [
+                    "2014",
+                    9.0
+                ],
+                [
+                    "1993",
+                    9.1
+                ],
+                [
+                    "2010",
+                    8.9
+                ],
+                [
+                    "2004",
+                    9.1
+                ],
+                [
+                    "2014",
+                    8.7
+                ],
+                [
+                    "1987",
+                    8.8
+                ],
+                [
+                    "2015",
+                    9.0
+                ],
+                [
+                    "1995",
+                    8.9
+                ],
+                [
+                    "2019",
+                    8.8
+                ],
+                [
+                    "2013",
+                    8.8
+                ],
+                [
+                    "2004",
+                    8.8
+                ],
+                [
+                    "2010",
+                    8.8
+                ],
+                [
+                    "1990",
+                    9.0
+                ],
+                [
+                    "2011",
+                    8.9
+                ],
+                [
+                    "2015",
+                    8.9
+                ],
+                [
+                    "1997",
+                    9.1
+                ],
+                [
+                    "2001",
+                    8.8
+                ],
+                [
+                    "2005",
+                    8.8
+                ],
+                [
+                    "2010",
+                    8.9
+                ],
+                [
+                    "2005",
+                    8.7
+                ],
+                [
+                    "2016",
+                    8.6
+                ],
+                [
+                    "2009",
+                    9.0
+                ],
+                [
+                    "2010",
+                    8.7
+                ],
+                [
+                    "2013",
+                    8.9
+                ],
+                [
+                    "2012",
+                    8.8
+                ],
+                [
+                    "2010",
+                    8.8
+                ],
+                [
+                    "2003",
+                    8.8
+                ],
+                [
+                    "1979",
+                    9.2
+                ],
+                [
+                    "1993",
+                    8.7
+                ],
+                [
+                    "2011",
+                    8.8
+                ],
+                [
+                    "2018",
+                    8.7
+                ],
+                [
+                    "1993",
+                    9.0
+                ],
+                [
+                    "2001",
+                    9.0
+                ],
+                [
+                    "2014",
+                    8.8
+                ],
+                [
+                    "2013",
+                    8.7
+                ],
+                [
+                    "2016",
+                    8.7
+                ],
+                [
+                    "2000",
+                    8.7
+                ],
+                [
+                    "1994",
+                    8.7
+                ],
+                [
+                    "1954",
+                    9.3
+                ],
+                [
+                    "2015",
+                    8.8
+                ],
+                [
+                    "1982",
+                    9.5
+                ],
+                [
+                    "2007",
+                    8.6
+                ],
+                [
+                    "2003",
+                    8.8
+                ],
+                [
+                    "1960",
+                    9.0
+                ],
+                [
+                    "2016",
+                    8.5
+                ],
+                [
+                    "2004",
+                    8.8
+                ],
+                [
+                    "2017",
+                    8.7
+                ],
+                [
+                    "2013",
+                    8.8
+                ],
+                [
+                    "2013",
+                    8.7
+                ],
+                [
+                    "2014",
+                    8.7
+                ],
+                [
+                    "2004",
+                    8.9
+                ],
+                [
+                    "2002",
+                    9.0
+                ],
+                [
+                    "2007",
+                    8.8
+                ],
+                [
+                    "1986",
+                    8.6
+                ],
+                [
+                    "1984",
+                    8.9
+                ],
+                [
+                    "2015",
+                    8.8
+                ],
+                [
+                    "1991",
+                    8.8
+                ],
+                [
+                    "2013",
+                    8.9
+                ],
+                [
+                    "1999",
+                    8.9
+                ],
+                [
+                    "2000",
+                    8.7
+                ],
+                [
+                    "2010",
+                    8.7
+                ],
+                [
+                    "1987",
+                    9.2
+                ],
+                [
+                    "2014",
+                    8.8
+                ],
+                [
+                    "2006",
+                    8.6
+                ],
+                [
+                    "1952",
+                    9.1
+                ],
+                [
+                    "2018",
+                    8.7
+                ],
+                [
+                    "2014",
+                    8.7
+                ],
+                [
+                    "2012",
+                    8.7
+                ],
+                [
+                    "1994",
+                    9.5
+                ],
+                [
+                    "1968",
+                    8.9
+                ],
+                [
+                    "2008",
+                    8.6
+                ],
+                [
+                    "2019",
+                    8.7
+                ],
+                [
+                    "2002",
+                    8.6
+                ],
+                [
+                    "2003",
+                    8.7
+                ],
+                [
+                    "2009",
+                    8.5
+                ],
+                [
+                    "1994",
+                    8.6
+                ],
+                [
+                    "2003",
+                    8.6
+                ],
+                [
+                    "2020",
+                    8.7
+                ],
+                [
+                    "1991",
+                    8.9
+                ],
+                [
+                    "2010",
+                    8.9
+                ],
+                [
+                    "2007",
+                    8.7
+                ],
+                [
+                    "1989",
+                    8.7
+                ],
+                [
+                    "2003",
+                    9.0
+                ],
+                [
+                    "2010",
+                    8.6
+                ],
+                [
+                    "2017",
+                    8.7
+                ],
+                [
+                    "2004",
+                    8.9
+                ],
+                [
+                    "1931",
+                    9.3
+                ],
+                [
+                    "1988",
+                    8.7
+                ],
+                [
+                    "2011",
+                    8.5
+                ],
+                [
+                    "2004",
+                    8.6
+                ],
+                [
+                    "2016",
+                    8.6
+                ],
+                [
+                    "2010",
+                    8.5
+                ],
+                [
+                    "2001",
+                    8.7
+                ],
+                [
+                    "1966",
+                    8.9
+                ],
+                [
+                    "2018",
+                    8.6
+                ],
+                [
+                    "1993",
+                    8.6
+                ],
+                [
+                    "1988",
+                    8.7
+                ],
+                [
+                    "1991",
+                    8.8
+                ],
+                [
+                    "1950",
+                    8.8
+                ],
+                [
+                    "2015",
+                    8.7
+                ],
+                [
+                    "1992",
+                    8.7
+                ],
+                [
+                    "1997",
+                    8.8
+                ],
+                [
+                    "2017",
+                    8.6
+                ],
+                [
+                    "2009",
+                    8.6
+                ],
+                [
+                    "2008",
+                    8.6
+                ],
+                [
+                    "2015",
+                    8.7
+                ],
+                [
+                    "2013",
+                    8.5
+                ],
+                [
+                    "1991",
+                    8.9
+                ],
+                [
+                    "2003",
+                    8.7
+                ],
+                [
+                    "2006",
+                    8.7
+                ],
+                [
+                    "2015",
+                    8.8
+                ],
+                [
+                    "2016",
+                    8.4
+                ],
+                [
+                    "2021",
+                    8.6
+                ],
+                [
+                    "2008",
+                    8.8
+                ],
+                [
+                    "2005",
+                    8.7
+                ],
+                [
+                    "1940",
+                    8.8
+                ],
+                [
+                    "2015",
+                    8.5
+                ],
+                [
+                    "2004",
+                    8.7
+                ],
+                [
+                    "2001",
+                    8.8
+                ],
+                [
+                    "2010",
+                    8.5
+                ],
+                [
+                    "1987",
+                    9.3
+                ],
+                [
+                    "1994",
+                    8.8
+                ],
+                [
+                    "2009",
+                    8.7
+                ],
+                [
+                    "1990",
+                    8.5
+                ],
+                [
+                    "2002",
+                    8.6
+                ],
+                [
+                    "2008",
+                    8.6
+                ],
+                [
+                    "2013",
+                    8.6
+                ],
+                [
+                    "2006",
+                    8.5
+                ],
+                [
+                    "2009",
+                    9.1
+                ],
+                [
+                    "2006",
+                    8.6
+                ],
+                [
+                    "2007",
+                    8.5
+                ],
+                [
+                    "2007",
+                    8.9
+                ]
+            ],
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u8bc4\u5206"
+            ],
+            "selected": {
+                "\u8bc4\u5206": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "1994",
+                "1993",
+                "1994",
+                "1997",
+                "1994",
+                "1997",
+                "2001",
+                "1993",
+                "2010",
+                "2014",
+                "1998",
+                "2009",
+                "1998",
+                "2009",
+                "2004",
+                "2008",
+                "2002",
+                "2016",
+                "1957",
+                "1995",
+                "2011",
+                "1972",
+                "2006",
+                "2011",
+                "2010",
+                "1988",
+                "1987",
+                "2017",
+                "1994",
+                "2008",
+                "2001",
+                "2003",
+                "1939",
+                "2018",
+                "2013",
+                "2009",
+                "1957",
+                "2018",
+                "2016",
+                "2004",
+                "2000",
+                "2012",
+                "2010",
+                "2002",
+                "2015",
+                "2002",
+                "1995",
+                "1986",
+                "2002",
+                "1992",
+                "1988",
+                "1953",
+                "2018",
+                "1989",
+                "1961",
+                "2001",
+                "1999",
+                "1974",
+                "1994",
+                "2013",
+                "1994",
+                "1999",
+                "2001",
+                "2008",
+                "2008",
+                "2006",
+                "1995",
+                "1998",
+                "2000",
+                "1965",
+                "2016",
+                "2009",
+                "1998",
+                "1975",
+                "1997",
+                "2011",
+                "1991",
+                "2010",
+                "2014",
+                "2006",
+                "2004",
+                "2009",
+                "2004",
+                "1997",
+                "1984",
+                "1994",
+                "2004",
+                "1936",
+                "1997",
+                "2011",
+                "1999",
+                "2003",
+                "1995",
+                "2003",
+                "2006",
+                "2003",
+                "2002",
+                "2012",
+                "2006",
+                "2013",
+                "2000",
+                "1993",
+                "2017",
+                "2005",
+                "1990",
+                "1995",
+                "2008",
+                "1995",
+                "1999",
+                "1994",
+                "2012",
+                "1997",
+                "2014",
+                "1999",
+                "2004",
+                "2001",
+                "1996",
+                "1994",
+                "2014",
+                "1993",
+                "2010",
+                "2004",
+                "2014",
+                "1987",
+                "2015",
+                "1995",
+                "2019",
+                "2013",
+                "2004",
+                "2010",
+                "1990",
+                "2011",
+                "2015",
+                "1997",
+                "2001",
+                "2005",
+                "2010",
+                "2005",
+                "2016",
+                "2009",
+                "2010",
+                "2013",
+                "2012",
+                "2010",
+                "2003",
+                "1979",
+                "1993",
+                "2011",
+                "2018",
+                "1993",
+                "2001",
+                "2014",
+                "2013",
+                "2016",
+                "2000",
+                "1994",
+                "1954",
+                "2015",
+                "1982",
+                "2007",
+                "2003",
+                "1960",
+                "2016",
+                "2004",
+                "2017",
+                "2013",
+                "2013",
+                "2014",
+                "2004",
+                "2002",
+                "2007",
+                "1986",
+                "1984",
+                "2015",
+                "1991",
+                "2013",
+                "1999",
+                "2000",
+                "2010",
+                "1987",
+                "2014",
+                "2006",
+                "1952",
+                "2018",
+                "2014",
+                "2012",
+                "1994",
+                "1968",
+                "2008",
+                "2019",
+                "2002",
+                "2003",
+                "2009",
+                "1994",
+                "2003",
+                "2020",
+                "1991",
+                "2010",
+                "2007",
+                "1989",
+                "2003",
+                "2010",
+                "2017",
+                "2004",
+                "1931",
+                "1988",
+                "2011",
+                "2004",
+                "2016",
+                "2010",
+                "2001",
+                "1966",
+                "2018",
+                "1993",
+                "1988",
+                "1991",
+                "1950",
+                "2015",
+                "1992",
+                "1997",
+                "2017",
+                "2009",
+                "2008",
+                "2015",
+                "2013",
+                "1991",
+                "2003",
+                "2006",
+                "2015",
+                "2016",
+                "2021",
+                "2008",
+                "2005",
+                "1940",
+                "2015",
+                "2004",
+                "2001",
+                "2010",
+                "1987",
+                "1994",
+                "2009",
+                "1990",
+                "2002",
+                "2008",
+                "2013",
+                "2006",
+                "2009",
+                "2006",
+                "2007",
+                "2007"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_scatter1.setOption(option_scatter1);
+    </script>
+<br/>                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="910fbf9263dc4192bd7cc3294fd31c8c" class="chart-container" style="position: absolute; width: 1008.857142px; height: 67.857142px; top: 59.57143020629883px; left: 10px;">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > </p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table align="center" border="False" padding="2px" style="background:{}; width:800px; height:50px; font-size:25px; color:#C0C0C0;">
+    <thead>
+        <tr>
+            <th>基</th>
+            <th>于</th>
+            <th>P</th>
+            <th>y</th>
+            <th>t</th>
+            <th>h</th>
+            <th>o</th>
+            <th>n</th>
+            <th>的</th>
+            <th>电</th>
+            <th>影</th>
+            <th>数</th>
+            <th>据</th>
+            <th>分</th>
+            <th>析</th>
+            <th>大</th>
+            <th>屏</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+        </div>
+
+<br/>    </div>
+    <script>
+            $('#bar_cmt2').css('border-style', 'dashed').css('border-width', '0px');$("#bar_cmt2>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#bar_cmt2'), function() { chart_bar_cmt2.resize()});
+            $('#pie1').css('border-style', 'dashed').css('border-width', '0px');$("#pie1>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#pie1'), function() { chart_pie1.resize()});
+            $('#wc1').css('border-style', 'dashed').css('border-width', '0px');$("#wc1>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#wc1'), function() { chart_wc1.resize()});
+            $('#5d2f97e35a654fe2970e6d940bad2a84').css('border-style', 'dashed').css('border-width', '0px');$("#5d2f97e35a654fe2970e6d940bad2a84>div:nth-child(1)").width("100%").height("100%");
+            $('#bar_cmt1').css('border-style', 'dashed').css('border-width', '0px');$("#bar_cmt1>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#bar_cmt1'), function() { chart_bar_cmt1.resize()});
+            $('#scatter1').css('border-style', 'dashed').css('border-width', '0px');$("#scatter1>div:nth-child(1)").width("100%").height("100%");
+            new ResizeSensor(jQuery('#scatter1'), function() { chart_scatter1.resize()});
+            $('#910fbf9263dc4192bd7cc3294fd31c8c').css('border-style', 'dashed').css('border-width', '0px');$("#910fbf9263dc4192bd7cc3294fd31c8c>div:nth-child(1)").width("100%").height("100%");
+            var charts_id = ['bar_cmt2','pie1','wc1','5d2f97e35a654fe2970e6d940bad2a84','bar_cmt1','scatter1','910fbf9263dc4192bd7cc3294fd31c8c'];
+function downloadCfg () {
+    const fileName = 'chart_config.json'
+    let downLink = document.createElement('a')
+    downLink.download = fileName
+
+    let result = []
+    for(let i=0; i<charts_id.length; i++) {
+        chart = $('#'+charts_id[i])
+        result.push({
+            cid: charts_id[i],
+            width: chart.css("width"),
+            height: chart.css("height"),
+            top: chart.offset().top + "px",
+            left: chart.offset().left + "px"
+        })
+    }
+
+    let blob = new Blob([JSON.stringify(result)])
+    downLink.href = URL.createObjectURL(blob)
+    document.body.appendChild(downLink)
+    downLink.click()
+    document.body.removeChild(downLink)
+}
+    </script>
+</body>
+</html>

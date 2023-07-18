@@ -1,0 +1,6 @@
+1. 新建一个工程，新建文件夹pic，templates，添加图片wuhan.webp，编辑main.py；
+2. 运行main.py，生成各个html文件；
+3. 打开"大屏_临时.html"，通过拖拽图片后，点击save config，生成chart_config.json文件，放入工程中；
+4. 再次运行程序，生成"最终大屏.html"；
+5.将"最终大屏.html"放入templates文件夹中；
+6.再次运行程序，点击IP地址可进入最终大屏页面。

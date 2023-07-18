@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts-wordcloud.min.js"></script>
+
+</head>
+<body >
+    <div id="wc1" class="chart-container" style="width:450px; height:350px; "></div>
+    <script>
+        var chart_wc1 = echarts.init(
+            document.getElementById('wc1'), 'white', {renderer: 'canvas'});
+        var option_wc1 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "name": "\u5bfc\u6f14\u540d\u79f0",
+            "shape": "circle",
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 3,
+            "sizeRange": [
+                12,
+                18
+            ],
+            "data": [
+                {
+                    "name": "\u5bab\u5d0e\u9a8f Hayao Miyazaki",
+                    "value": 8,
+                    "textStyle": {
+                        "color": "rgb(109,2,100)"
+                    }
+                },
+                {
+                    "name": "\u53f2\u8482\u6587\u00b7\u65af\u76ae\u5c14\u4f2f\u683c Steven Spielberg",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(95,111,9)"
+                    }
+                },
+                {
+                    "name": "\u514b\u91cc\u65af\u6258\u5f17\u00b7\u8bfa\u5170 Christopher Nolan",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(118,150,34)"
+                    }
+                },
+                {
+                    "name": "\u674e\u5b89 Ang Lee",
+                    "value": 5,
+                    "textStyle": {
+                        "color": "rgb(94,126,135)"
+                    }
+                },
+                {
+                    "name": "\u738b\u5bb6\u536b Kar Wai Wong",
+                    "value": 5,
+                    "textStyle": {
+                        "color": "rgb(54,89,61)"
+                    }
+                },
+                {
+                    "name": "\u5927\u536b\u00b7\u82ac\u5947 David Fincher",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(89,107,24)"
+                    }
+                },
+                {
+                    "name": "\u4eca\u654f Satoshi Kon",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(112,65,91)"
+                    }
+                },
+                {
+                    "name": "\u662f\u679d\u88d5\u548c Hirokazu Koreeda",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(134,29,29)"
+                    }
+                },
+                {
+                    "name": "\u8a79\u59c6\u65af\u00b7\u5361\u6885\u9686 James Cameron",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(37,1,81)"
+                    }
+                },
+                {
+                    "name": "\u6731\u585e\u4f69\u00b7\u6258\u7eb3\u591a\u96f7 Giuseppe Tornatore",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(128,100,92)"
+                    }
+                }
+            ],
+            "width": "500px",
+            "height": "400px",
+            "drawOutOfBound": false,
+            "textStyle": {
+                "emphasis": {}
+            },
+            "label": {
+                "show": true,
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u5bfc\u6f14\u59d3\u540d\u5206\u6790-\u8bcd\u4e91\u56fe",
+            "target": "blank",
+            "subtarget": "blank",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false,
+            "textStyle": {
+                "fontSize": 20
+            }
+        }
+    ]
+};
+        chart_wc1.setOption(option_wc1);
+    </script>
+</body>
+</html>

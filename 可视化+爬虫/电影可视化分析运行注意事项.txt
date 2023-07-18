@@ -1,0 +1,5 @@
+1. 安装MySQL之前，运行“vs_community__2019”，选装Python和C++开发；
+2. 安装MySQL，设置和记住root的密码；
+3. 配置MySQL环境变量，PATH=MySQL的安装路径
+4. 创建数据库bigscreen
+5. 修改程序中root对应的密码
